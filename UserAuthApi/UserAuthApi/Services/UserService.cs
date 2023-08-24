@@ -14,6 +14,11 @@ namespace UserAuthApi.Services
 
         public async Task createUser(User user)
         {
+            user.isConfirmed = false;
+            user.isBlocked = false;
+            user.CreatedAt = DateTime.Now;
+            user.LastModifiedAt = DateTime.Now;
+
             await _repositoryUser.Add(user);
         }
 
