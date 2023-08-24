@@ -11,6 +11,8 @@ namespace UserAuthApi.Entities
         public string Email { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
+        public bool isBlocked { get; set; }
+        public bool isConfirmed { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime LastModifiedAt { get; set; }
     }
