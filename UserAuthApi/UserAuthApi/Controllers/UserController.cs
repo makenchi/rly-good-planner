@@ -12,9 +12,10 @@ namespace UserAuthApi.Controllers
     {
         private readonly IUserService _userservice;
         private readonly IPasswordService _passwordService;
-        public UserController(IUserService userservice)
+        public UserController(IUserService userservice, IPasswordService passwordService)
         {
             _userservice = userservice;
+            _passwordService = passwordService;
         }
 
         [HttpPost]
